@@ -1,4 +1,4 @@
 # My Hyprland dreamfiles!
 
 what you need:
-waybar, kitty, wofi,
+waybar, kitty, wofi, nerd-fonts
