@@ -1,0 +1,102 @@
+{
+  "layer": "top",
+  "modules-left": [ "custom/wofi", "custom/launcher", "custom/files", "custom/craft",  "custom/steam", ],
+  "modules-center": [ "hyprland/workspaces"],
+  "modules-right": [ "cpu", "memory", "pulseaudio", "battery", "clock", "custom/power", ], 
+  "margin": "0",
+
+
+
+
+    "cpu": {
+      "format": "   {usage}%",
+      "tooltip": false,
+    },
+
+
+
+    "memory": {
+      "interval": 5,
+      "format": "   {}%",
+      "tooltip": false,  
+    },
+   
+
+    "custom/power": {
+        "format": " ⏻ {icon}",
+        "on-click": "exec /home/geckoman/.config/wofi/powermenu",
+    },
+
+    "custom/wofi": {
+       "format": "   {icon}",
+       "on-click": "exec wofi",
+       "signal": 8,
+       "tooltip": false,
+    },
+
+   "custom/launcher": {
+        "format": "  {icon}",                  
+        "on-click": "exec firefox",
+        "signal": 8,
+    },
+
+    "custom/files": {
+        "format": "  {icon}",                  
+        "on-click": "exec pcmanfm",
+        "signal": 8,
+    },
+
+    "custom/craft": {
+        "format": " 󰍳 {icon}",                  
+        "on-click": "exec multimc",
+        "signal": 8,
+    },  
+
+     "custom/steam": {
+        "format": "  {icon}",                  
+        "on-click": "exec steam",
+        "signal": 8,
+    },  
+
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "  {volume}%",
+    "on-click":"pavucontrol",
+    "format-icons": {
+      "default": [" ", "", " "]
+    }
+  },
+
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "\udb80\udc84 {capacity}%",
+    "format-plugged": "\udb81\udea5 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["\udb80\udc7a", "\udb80\udc7b", "\udb80\udc7c", "\udb80\udc7d", "\udb80\udc7e", "\udb80\udc7f", "\udb80\udc80", "\udb80\udc81", "\udb80\udc82", " \udb80\udc79"]
+  },
+
+  "clock": {
+    "format": "  {:%R}",
+  },
+
+
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "HDMI-A-2": [ 1, 2, 3, 4, 5]
+    }
+  },
+
+  
+
+  
+}
