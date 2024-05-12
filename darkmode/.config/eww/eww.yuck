@@ -1,0 +1,13 @@
+(include "/home/geckoman/.config/eww/widgets/time.yuck")
+
+
+(defwindow time
+       :monitor 0
+       :geometry (geometry :x "800px"
+                           :y "500px"
+                           :width "345px"
+                               :height "200px"
+                           :anchor "bottom left")
+       :stacking "bg"
+           :exclusive true
+       (time))
